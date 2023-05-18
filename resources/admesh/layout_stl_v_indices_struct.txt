@@ -1,0 +1,3 @@
+         0 | v_indices_struct
+         0 |   int [3] vertex
+           | [sizeof=12, align=4]

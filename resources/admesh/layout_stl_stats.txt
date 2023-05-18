@@ -1,0 +1,44 @@
+         0 | stl_stats
+         0 |   char [81] header
+        84 |   int type
+        88 |   int number_of_facets
+        92 |   stl_vertex max
+        92 |     float x
+        96 |     float y
+       100 |     float z
+       104 |   stl_vertex min
+       104 |     float x
+       108 |     float y
+       112 |     float z
+       116 |   stl_vertex size
+       116 |     float x
+       120 |     float y
+       124 |     float z
+       128 |   float bounding_diameter
+       132 |   float shortest_edge
+       136 |   float volume
+       140 |   float surface_area
+       144 |   unsigned int number_of_blocks
+       148 |   int connected_edges
+       152 |   int connected_facets_1_edge
+       156 |   int connected_facets_2_edge
+       160 |   int connected_facets_3_edge
+       164 |   int facets_w_1_bad_edge
+       168 |   int facets_w_2_bad_edge
+       172 |   int facets_w_3_bad_edge
+       176 |   int original_num_facets
+       180 |   int edges_fixed
+       184 |   int degenerate_facets
+       188 |   int facets_removed
+       192 |   int facets_added
+       196 |   int facets_reversed
+       200 |   int backwards_edges
+       204 |   int normals_fixed
+       208 |   int number_of_parts
+       212 |   int malloced
+       216 |   int freed
+       220 |   int facets_malloced
+       224 |   int collisions
+       228 |   int shared_vertices
+       232 |   int shared_malloced
+           | [sizeof=236, align=4]

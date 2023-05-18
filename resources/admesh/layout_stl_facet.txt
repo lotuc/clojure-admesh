@@ -1,0 +1,8 @@
+         0 | stl_facet
+         0 |   stl_normal normal
+         0 |     float x
+         4 |     float y
+         8 |     float z
+        12 |   stl_vertex [3] vertex
+        48 |   char [2] extra
+           | [sizeof=52, align=4]

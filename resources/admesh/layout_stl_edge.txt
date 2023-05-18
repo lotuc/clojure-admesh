@@ -1,0 +1,11 @@
+         0 | stl_edge
+         0 |   stl_vertex p1
+         0 |     float x
+         4 |     float y
+         8 |     float z
+        12 |   stl_vertex p2
+        12 |     float x
+        16 |     float y
+        20 |     float z
+        24 |   int facet_number
+           | [sizeof=28, align=4]

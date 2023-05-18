@@ -1,0 +1,55 @@
+         0 | stl_file
+         0 |   FILE * fp
+         8 |   stl_facet * facet_start
+        16 |   stl_edge * edge_start
+        24 |   stl_hash_edge ** heads
+        32 |   stl_hash_edge * tail
+        40 |   int M
+        48 |   stl_neighbors * neighbors_start
+        56 |   v_indices_struct * v_indices
+        64 |   stl_vertex * v_shared
+        72 |   stl_stats stats
+        72 |     char[81] header
+       156 |     stl_type type
+       160 |     int number_of_facets
+       164 |     stl_vertex max
+       164 |       float x
+       168 |       float y
+       172 |       float z
+       176 |     stl_vertex min
+       176 |       float x
+       180 |       float y
+       184 |       float z
+       188 |     stl_vertex size
+       188 |       float x
+       192 |       float y
+       196 |       float z
+       200 |     float bounding_diameter
+       204 |     float shortest_edge
+       208 |     float volume
+       212 |     float surface_area
+       216 |     unsigned int number_of_blocks
+       220 |     int connected_edges
+       224 |     int connected_facets_1_edge
+       228 |     int connected_facets_2_edge
+       232 |     int connected_facets_3_edge
+       236 |     int facets_w_1_bad_edge
+       240 |     int facets_w_2_bad_edge
+       244 |     int facets_w_3_bad_edge
+       248 |     int original_num_facets
+       252 |     int edges_fixed
+       256 |     int degenerate_facets
+       260 |     int facets_removed
+       264 |     int facets_added
+       268 |     int facets_reversed
+       272 |     int backwards_edges
+       276 |     int normals_fixed
+       280 |     int number_of_parts
+       284 |     int malloced
+       288 |     int freed
+       292 |     int facets_malloced
+       296 |     int collisions
+       300 |     int shared_vertices
+       304 |     int shared_malloced
+       308 |   char error
+           | [sizeof=312, align=8]

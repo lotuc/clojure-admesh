@@ -1,0 +1,6 @@
+         0 | struct stl_hash_edge
+         0 |   unsigned int [6] key
+        24 |   int facet_number
+        28 |   int which_edge
+        32 |   struct stl_hash_edge * next
+           | [sizeof=40, align=8]

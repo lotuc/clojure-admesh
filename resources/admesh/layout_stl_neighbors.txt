@@ -1,0 +1,4 @@
+         0 | stl_neighbors
+         0 |   int [3] neighbor
+        12 |   char [3] which_vertex_not
+           | [sizeof=16, align=4]

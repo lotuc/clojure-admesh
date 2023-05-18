@@ -1,0 +1,5 @@
+         0 | stl_vertex
+         0 |   float x
+         4 |   float y
+         8 |   float z
+           | [sizeof=12, align=4]
