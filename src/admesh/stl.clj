@@ -82,3 +82,188 @@
   @stl-v-indicies-struct*
   @stl-stats*
   @stl-file*)
+
+(def fns
+  {:stl_open                      {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]]}
+   :stl_close                     {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_stats_out                 {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :pointer]
+                                              ['input-file :string]]}
+   :stl_print_edges               {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :pointer]]}
+   :stl_print_neighbors           {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]]}
+   :stl_put_little_int            {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['value-in :int32]]}
+   :stl_put_little_float          {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['value-in :float32]]}
+   :stl_write_ascii               {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]
+                                              ['label :string]]}
+   :stl_write_binary              {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]
+                                              ['label :string]]}
+   :stl_write_binary_block        {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['fp :pointer]]}
+   :stl_check_facets_exact        {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_check_facets_nearby       {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['tolerance :float32]]}
+   :stl_remove_unconnected_facets {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_write_vertex              {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['facet :int32]
+                                              ['vertex :int32]]}
+   :stl_write_facet               {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['label :string]
+                                              ['facet :int32]]}
+   :stl_write_edge                {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['label :string]
+                                              ['edge :pointer]]}
+   :stl_write_neighbor            {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['facet :int32]]}
+   :stl_write_quad_object         {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]]}
+   :stl_verify_neighbors          {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_fill_holes                {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_fix_normal_directions     {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_fix_normal_values         {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_reverse_all_facets        {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_translate                 {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['x :float32]
+                                              ['y :float32]
+                                              ['z :float32]]}
+   :stl_translate_relative        {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['x :float32]
+                                              ['y :float32]
+                                              ['z :float32]]}
+   :stl_stretch                   {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['x_min :float32]
+                                              ['x_max :float32]
+                                              ['x_off :float32]
+                                              ['y_min :float32]
+                                              ['y_max :float32]
+                                              ['y_off :float32]
+                                              ['z_min :float32]
+                                              ['z_max :float32]
+                                              ['z_off :float32]]}
+   :stl_scale_versor              {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['versor :pointer]]}
+   :stl_scale                     {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['factor :float32]]}
+   :stl_rotate_x                  {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['angle :float32]]}
+   :stl_rotate_y                  {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['angle :float32]]}
+   :stl_rotate_z                  {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['angle :float32]]}
+   :stl_mirror_xy                 {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_mirror_yz                 {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_mirror_xz                 {:rettype :void
+                                   :argtypes [['stl :pointer]]}
+   :stl_open_merge                {:rettype :void
+                                   :argtypes [['stl :pointer]
+                                              ['file :string]]}
+   :stl_invalidate_shared_vertices {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_generate_shared_vertices   {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]]}
+   :stl_write_obj                  {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]]}
+   :stl_write_off                  {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]]}
+   :stl_write_dxf                  {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]
+                                               ['label :string]]}
+   :stl_write_vrml                 {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]]}
+   :stl_calculate_normal           {:rettype :void
+                                    :argtypes [['normal :pointer]
+                                               ['facet :pointer]]}
+   :stl_normalize_vector           {:rettype :void
+                                    :argtypes [['v :pointer]]}
+   :stl_calculate_volume           {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_calculate_surface_area     {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_repair                     {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['fixall-flag :int32]
+                                               ['exact-flag :int32]
+                                               ['tolerance-flag :int32]
+                                               ['tolerance :float32]
+                                               ['increment-flag :int32]
+                                               ['increment :float32]
+                                               ['nearby-flag :int32]
+                                               ['iterations :int32]
+                                               ['remove-unconnected-flag :int32]
+                                               ['fill-holes-flag :int32]
+                                               ['normal-directions-flag :int32]
+                                               ['normal-values-flag :int32]
+                                               ['reverse-all-flag :int32]
+                                               ['verbose-flag :int32]]}
+   :stl_initialize                 {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_count_facets               {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['file :string]]}
+   :stl_allocate                   {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_read                       {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['first-facet :int32]
+                                               ['first :int32]]}
+   :stl_facet_stats                {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['facet :int32]
+                                               ['first :int32]]}
+   :stl_reallocate                 {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_add_facet                  {:rettype :void
+                                    :argtypes [['stl :pointer]
+                                               ['new-facet :pointer]]} ;
+   :stl_get_size                   {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_clear_error                {:rettype :void
+                                    :argtypes [['stl :pointer]]}
+   :stl_get_error                  {:rettype :int32
+                                    :argtypes [['stl :pointer]]}
+   :stl_exit_on_error              {:rettype :void
+                                    :argtypes [['stl :pointer]]}})
